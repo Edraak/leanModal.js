@@ -38,15 +38,20 @@
         		$('#lean_overlay').css({ 'display' : 'block', opacity : 0 });
 
         		$('#lean_overlay').fadeTo(200,o.overlay);
+        		
+        		var left = '50%';
+        		var marginLeft = -(modal_width/2) + "px";
+        		
 
         		$(modal_id).css({ 
-        		
         			'display' : 'block',
         			'position' : 'fixed',
         			'opacity' : 0,
         			'z-index': 11000,
-        			'left' : 50 + '%',
-        			'margin-left' : -(modal_width/2) + "px",
+        			'left': left,
+        			'right': left, // rtl
+        			'margin-left': marginLeft,
+        			'margin-right': marginRight, // rtl
         			'top' : o.top + "px"
         		
         		});
